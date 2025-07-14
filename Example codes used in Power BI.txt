@@ -1,0 +1,9 @@
+//Example codes used in Power BI
+1.FullLocation = 'bengaluru_house_prices_fully_cleaned'[location] & ", Bengaluru, India"
+2.price_per_sqft = 'bengaluru_house_prices_fully_cleaned'[price] * 100000 / 'bengaluru_house_prices_fully_cleaned'[total_sqft]
+3.AvailabilityGroup = 
+IF(
+    'bengaluru_house_prices_fully_cleaned'[availability] = "Ready To Move",
+    "Ready To Move",
+    "Future Possession"
+)
