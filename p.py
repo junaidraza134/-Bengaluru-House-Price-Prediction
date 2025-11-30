@@ -4,7 +4,7 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 
 
-df = pd.read_csv("C:\\Users\\junai\\OneDrive\\Desktop\\Dataset\\bengaluru_house_prices.csv")
+df = pd.read_csv("bengaluru_house.csv")
 
 df.drop(columns="society", inplace=True)
 
@@ -42,8 +42,7 @@ print(df1.head())
 
 df2=df1.copy()
 df2['price_per_sqft']=df2['price']*1000000/df2['total_sqft']
-df2=df2.head()
-print(df2)
+print(df2.head())
 
 df2_stats=df2['price_per_sqft'].describe()
 print(df2_stats)
